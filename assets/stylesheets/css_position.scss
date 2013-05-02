@@ -1,0 +1,42 @@
+.sample {
+  border: 2px dashed black;
+}
+.static {
+  position: static
+}
+.relative-one {
+  border: 2px solid green;
+  position: relative;
+}
+.relative-two {
+  border: 2px solid blue;
+  left: 50px;
+  position: relative;
+  top: -30px;
+}
+.fixed {
+  p {
+    padding: 5px;
+  }
+  background-color: #fcf8e3;
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  width: 150px;
+}
+
+.relative {
+  border: 2px solid orange;
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+.absolute {
+  border: 2px solid green;
+  height: 200px;
+  position: absolute;
+  top: 150px;
+  right: 0;
+  width: 150px;
+}

@@ -1,0 +1,22 @@
+!!! 5
+%html
+  %head
+    %script{type: 'text/javascript',
+            src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'}
+    %link{rel: 'stylesheet', type: 'text/css', href:'http://netdna.bootstrapcdn.com/bootswatch/2.3.1/readable/bootstrap.min.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href:'assets/application.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href:'assets/sunburst.css'}
+    %script{src: "https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" }
+    %title Hack It
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.brand{href: '/'} hack_it.
+          %ul.nav.pull-right
+            %li
+              %a{href: 'https://github.com/jazminschroeder'} Github
+            %li
+              %a{href: 'http://jazminschroeder.com'} Get in touch
+  .container.main
+    = yield

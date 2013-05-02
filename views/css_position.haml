@@ -1,0 +1,71 @@
+%link{rel: 'stylesheet', type: 'text/css', href:'assets/css_position.css'}
+%h2 CSS Position
+
+%h3 Static
+%pre.prettyprint.lang-css
+  :plain
+    .static {
+      position: static;
+    }
+.static.sample
+  %span.badge.badge-success .static
+  %p This is the default position, nothing special about it.
+%hr
+%h3 Relative
+
+%pre.prettyprint.lang-css
+  :plain
+    .relative-one {
+      position: relative;
+    }
+
+    .relative-two {
+      left: 50px;
+      position: relative;
+      top: -30px;
+    }
+.relative-one
+  %span.badge.badge-success .relative-one
+  %p Relative allows you to set a few more properties
+  %br
+.relative-two
+  %span.badge.badge-info .relative-two
+  %p You can set: top, right, bottom and left
+
+%hr
+%h3 Fixed
+%pre.prettyprint.lang-css
+  :plain
+    .fixed {
+      background-color: #fcf8e3;
+      bottom: 0;
+      position: fixed;
+      right: 0;
+      width: 150px;
+    }
+.fixed
+  %span.badge.badge-warning .fixed
+  %p Element is positioned relative to the browser window, as with relative you can set top, right, bottom, left.
+%hr
+%h3 Absolute
+%pre.prettyprint.lang-css
+  :plain
+    .relative {
+      position: relative;
+      width: 400px;
+      height: 300px;
+    }
+    .absolute {
+      position: absolute;
+      top: 150px;
+      right: 0;
+      width: 300px;
+      height: 200px;
+    }
+.relative
+  %span.badge.badge-warning position: relative
+  %p Because this element has relative position a child with absolute position would be relative to thsis element, if this element was position:static then the absolute child would be positioned relative to the document body.
+
+  .absolute
+    %span.badge.badge-success position: absolute
+    %p Positioned relative to its parent
