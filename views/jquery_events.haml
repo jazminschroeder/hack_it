@@ -1,0 +1,38 @@
+%link{rel: 'stylesheet', type: 'text/css', href: 'assets/jquery_events.css'}
+%script{type: 'application/javascript', src: 'assets/jquery_events.js'}
+%h2 Jquery Events
+%span.label.label-success{id: 'upcoming'} Upcoming
+#events.row
+  .span3.event.upcoming
+    <h2>Event 1</h2>
+    %span.label.label-info Details
+    .details
+      This event will take place in this amazing place, we will talk about a lot of great things!
+  .span3.event
+    <h2>Event 2</h2>
+    %span.label.label-info Details
+    .details
+      This is Event 2 only for people who like Event 2 things
+  .span3.event.upcoming
+    <h2>Event 3</h2>
+    %span.label.label-info Details
+    .details
+      This is Event 3. If you want to be part of it you need to act quick! really quick!
+%pre.prettyprint.lang-css
+  :plain
+    $(document).ready(function(){
+      $('.event').on('mouseenter', function(){
+        $('.highlight').removeClass('highlight')
+        $(this).addClass('highlight');
+      });
+      
+      $('#events').on('click', '.label-info', function(){
+        $(this).parent().find('.details').slideToggle('fast');
+      });
+
+      $('#upcoming').on('click', function(){
+        $('.highlight').removeClass('highlight')
+        $('.event').filter('.upcoming').toggleClass('featured')
+      });
+    }); 
+

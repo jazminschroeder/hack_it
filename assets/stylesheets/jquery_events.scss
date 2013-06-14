@@ -1,0 +1,27 @@
+#events{
+  padding-top: 20px;
+  overflow: hidden;
+}
+.event {
+  h2 { 
+    font-size: 16px;
+    margin-top: -10px;
+    text-align: center;
+    background-color:#f2f7fb ;
+  }
+  border: 1px solid gray;
+  height: 190px;
+  position: relative;
+  padding: 10px;
+  .details{
+    display: none;
+  }
+}
+.highlight{
+  border: 2px solid black;
+}
+
+.featured {
+  border: 2px solid black;
+  top: -20px;
+}

@@ -10,4 +10,9 @@ class Application < Sinatra::Base
   get '/css-position' do
     haml :css_position
   end
+
+  get '/jquery-events' do
+    haml :jquery_events
+  end 
+
 end
